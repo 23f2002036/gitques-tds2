@@ -1,0 +1,13 @@
+name: Email Step Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 23f2002036@ds.study.iitm.ac.in
+        run: echo "This step includes my email as required."
