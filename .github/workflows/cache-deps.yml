@@ -31,3 +31,12 @@ jobs:
 
       - name: Run script
         run: python main.py
+
+        - name: prime-cache-57e85fb
+          uses: actions/cache@v3
+          with:
+            path: ~/.cache/pip
+            key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+            restore-keys: |
+              ${{ runner.os }}-pip-
+
